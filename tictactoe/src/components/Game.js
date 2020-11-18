@@ -8,9 +8,7 @@ const Game = () => {
     var gameStarted = true;
     
     function startGame(){
-
         gameStarted = !gameStarted
-        
     }
     
 
