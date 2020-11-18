@@ -5,10 +5,11 @@ import "./Game.css";
 const Game = () => {
 
     const [player, setPlayer] = useState("Player 1");
-    var gameStarted = true;
+    var [gameStarted, setGameStarted] = useState(false)
     
     function startGame(){
-        gameStarted = !gameStarted
+        setGameStarted(!gameStarted)
+        console.log("Game started is now -> ", gameStarted)
     }
     
 
@@ -16,7 +17,7 @@ const Game = () => {
     <div className="game">
         <div><button onClick={() => startGame()}>Start Game</button></div>
         {console.log(gameStarted, "<--- Game Started")}
-        <div>{{gameStarted} ? "The game has started" : "The game has not started"}</div>
+        <div>{gameStarted ? "The game has started" : "The game has not started"}</div>
         
         <div className="board">
             <div className="square"></div>
