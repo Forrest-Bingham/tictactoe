@@ -5,7 +5,6 @@ import Square from "./Square.js"
 
 const Game = () => {
 
-    const [player, setPlayer] = useState("Player 1");
     var [gameStarted, setGameStarted] = useState(false)
     var [player1turn, setPlayer1turn] = useState(true)
     
@@ -20,7 +19,6 @@ const Game = () => {
             <div className="start"><button className="startButton" onClick={() => startGame()}>Start Game</button></div>
             <div>{gameStarted ? "The game has started" : "The game has not started"}</div>
             <div>{player1turn ? "It is Player 1's turn" : "It is Player 2's turn"}</div>
-            {/* <div className="start"><button className="startButton" onClick={() => chooseSquare()}>Choose a Square</button></div> */}
         </div>
         <div className="board">
             <Square
